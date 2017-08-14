@@ -1,0 +1,66 @@
+
+<commonds>
+	<commond id="0" name="_PROTOCOL_UNKNOWN" desc="未知"/>
+	<commond id="1" name="_PROTOCOL_VERIFY_CONNECT" desc="验证连接"/>
+	<commond id="2" name="_PROTOCOL_PING" desc="PING"/>
+	<commond id="3" name="_PROTOCOL_HEARTBEAT" desc="心跳"/>
+	<commond id="4" name="_PROTOCOL_REGISTER_GAME" desc="注册游戏"/>
+	<commond id="5" name="_PROTOCOL_WRITE_TO_GATEUSER" desc="跳转信息"/>
+	<commond id="6" name="_PROTOCOL_WRITE_TO_CLIENT" desc="跳转信息"/>
+	<commond id="7" name="_PROTOCOL_WRITE_TO_CHARACTER" desc="跳转信息"/>
+	<commond id="8" name="_PROTOCOL_CLOSE_CLIENT" desc="关闭连接"/>
+	<commond id="9" name="_PROTOCOL_MESSAGE_BOX" desc="弹出消息框"/>
+	<commond id="10" name="_PROTOCOL_USER_LOGIN" desc="用户登录"/>
+	<!-- 人物-->
+	<commond id="11" name="_PROTOCOL_GET_CHARACTERS" desc=""/>
+	<commond id="12" name="_PROTOCOL_PUSH_ELEMENT" desc=""/>
+	<commond id="13" name="_PROTOCOL_CLEAR_ELEMENT" desc="登陆"/>
+	<commond id="14" name="_PROTOCOL_PUSH_CHARACTERS_FINISH" desc="登陆"/>
+	<commond id="15" name="_PROTOCOL_CREATE_CHARACTER" desc="登陆"/>
+	<commond id="16" name="_PROTOCOL_SELECT_CHARACTER" desc="登陆"/>
+	<commond id="17" name="_PROTOCOL_LOAD_CHARACTER_FINISH" desc="登陆"/>
+	<commond id="18" name="_PROTOCOL_EXIT_WORLD" desc="登陆"/>
+	<!--游戏大厅-->
+	<commond id="19" name="_PROTOCOL_REFRESH_GAME_LIST" desc=""/>
+	<commond id="20" name="_PROTOCOL_ADD_GAME" desc=""/>
+	<commond id="21" name="_PROTOCOL_REFRESH_GAME_LIST_FINISH" desc=""/>
+	<!--游戏-->
+	<commond id="22" name="_PROTOCOL_GOLD_LITTLE" desc=""/>
+	<commond id="23" name="_PROTOCOL_ENTER_GAME" desc=""/>
+	<commond id="24" name="_PROTOCOL_QUIT_GAME" desc=""/>
+	<commond id="25" name="_PROTOCOL_ROOM_LIST" desc=""/>
+	<commond id="26" name="_PROTOCOL_WAIT_GAME" desc=""/>
+	<commond id="27" name="_PROTOCOL_MATCH_START" desc=""/>
+	<commond id="28" name="_PROTOCOL_MATCH_END" desc=""/>
+	<!--Buffer-->
+	<commond id="29" name="_PROTOCOL_ACTIVE_BUFFER" desc=""/>
+	<commond id="30" name="_PROTOCOL_INACTIVE_BUFFER" desc=""/>
+	<!--技能-->
+	<commond id="31" name="_PROTOCOL_USE_SKILL" desc=""/>
+	<commond id="32" name="_PROTOCOL_CAST_SKILL" desc=""/>
+	<!--结算-->
+	<commond id="33" name="_PROTOCOL_BANLANCE" desc=""/>
+	<!--好友-->
+	<commond id="34" name="_PROTOCOL_ADD_FRIEND" desc=""/>
+	<commond id="35" name="_PROTOCOL_DELETE_FRIEND" desc=""/>
+	<commond id="10000" name="_PROTOCOL_REFRESH_GOLD" desc=""/>
+	<commond id="10001" name="_PROTOCOL_ITEM_MSG" desc=""/>
+	<commond id="10002" name="_PROTOCOL_BENEFITS" desc=""/>
+</commonds>
+
+<structs>
+	<struct name="_VERIFY_ID" desc="验证版本">
+		<var type="int" name="id" desc="索引" />
+		<var type="long long" name="key" desc="随机码" />
+	</struct>
+	
+	<struct name="_VERIFY_SERVER" desc="验证版本" parents="_VERIFY_ID">
+		<var type="int" name="server_id" desc="索引" />
+		<var type="long long" name="server_key" desc="随机码" />
+	</struct>
+	
+	<struct name="_WRITE_TO_CHARACTER" desc="" parents="_VERIFY_ID">
+		<var type="int" name="character_id" desc="" />
+	</struct>
+	
+</structs>
